@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define MAX_PROCESOS 5
+
 // Parte A: Estructura Proceso
 typedef struct {
     int pid;
@@ -8,6 +10,6 @@ typedef struct {
 } Proceso;
 
 int main(void) {
-    printf("Sistema de Gestion de Procesos\n");
+    Proceso listaProcesos[MAX_PROCESOS];
     return 0;
 }
