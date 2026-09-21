@@ -22,9 +22,13 @@ void registrarProcesos(Proceso procesos[], int cantidad) {
     }
 }
 
+// Parte C: Retorna un puntero al proceso ganador para no duplicar datos en memoria
+const Proceso* buscarMayorPrioridad(const Proceso* procesos, int cantidad);
+
 int main(void) {
     Proceso listaProcesos[MAX_PROCESOS];
     registrarProcesos(listaProcesos, MAX_PROCESOS);
     return 0;
 }
 
+	
