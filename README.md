@@ -25,5 +25,5 @@ Este programa en lenguaje **C** simula un planificador básico de tareas/proceso
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/felixramirezhuamanchaqui/so_lab01_tarea
+   git clone https://github.com/felixramirezhuamanchaqui/SO_IS380_LUNES_RAMIREZ_HUAMANCHAQUI_FELIX_Lab01
    cd so_lab01_tarea
