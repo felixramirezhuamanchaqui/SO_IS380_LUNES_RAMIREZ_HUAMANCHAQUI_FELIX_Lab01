@@ -9,14 +9,22 @@ typedef struct {
     int prioridad;
 } Proceso;
 
-// Prototipo de la función de registro
-void registrarProcesos(Proceso procesos[], int cantidad);
+void registrarProcesos(Proceso procesos[], int cantidad) {
+    printf("=== REGISTRO DE PROCESOS ===\n");
+    for (int i = 0; i < cantidad; i++) {
+        printf("\nProceso %d:\n", i + 1);
+        printf("Ingrese PID: ");
+        scanf("%d", &procesos[i].pid);
+        printf("Ingrese Nombre: ");
+        scanf("%49s", procesos[i].nombre);
+        printf("Ingrese Prioridad (numero menor = mayor prioridad): ");
+        scanf("%d", &procesos[i].prioridad);
+    }
+}
 
 int main(void) {
     Proceso listaProcesos[MAX_PROCESOS];
+    registrarProcesos(listaProcesos, MAX_PROCESOS);
     return 0;
 }
 
-void registrarProcesos(Proceso procesos[], int cantidad) {
-    // Pendiente
-}
