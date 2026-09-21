@@ -9,6 +9,11 @@ typedef struct {
     int prioridad;
 } Proceso;
 
+// Prototipos de funciones
+void registrarProcesos(Proceso procesos[], int cantidad);
+const Proceso* buscarMayorPrioridad(const Proceso* procesos, int cantidad);
+void mostrarProcesoGanador(const Proceso* ganador);
+
 void registrarProcesos(Proceso procesos[], int cantidad) {
     printf("=== REGISTRO DE PROCESOS ===\n");
     for (int i = 0; i < cantidad; i++) {
