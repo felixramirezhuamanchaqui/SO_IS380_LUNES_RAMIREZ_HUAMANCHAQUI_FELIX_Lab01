@@ -41,7 +41,16 @@ const Proceso* buscarMayorPrioridad(const Proceso* procesos, int cantidad) {
 
 int main(void) {
     Proceso listaProcesos[MAX_PROCESOS];
+
+    // Parte B: Captura de datos
     registrarProcesos(listaProcesos, MAX_PROCESOS);
+
+    // Parte C: Búsqueda
+    const Proceso* ganador = buscarMayorPrioridad(listaProcesos, MAX_PROCESOS);
+
+    // Parte D: Despliegue de resultado
+    mostrarProcesoGanador(ganador);
+
     return 0;
 }
 
