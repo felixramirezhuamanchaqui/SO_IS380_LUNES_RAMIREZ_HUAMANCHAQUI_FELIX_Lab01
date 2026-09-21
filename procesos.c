@@ -45,3 +45,18 @@ int main(void) {
     return 0;
 }
 
+// Parte D: Mostrar resultado
+void mostrarProcesoGanador(const Proceso* ganador) {
+    if (ganador == NULL) {
+        printf("\nNo hay procesos registrados.\n");
+        return;
+    }
+
+    printf("\n========================================\n");
+    printf("   PROCESO GANADOR (MAYOR PRIORIDAD)   \n");
+    printf("========================================\n");
+    printf("PID       : %d\n", ganador->pid);
+    printf("Nombre    : %s\n", ganador->nombre);
+    printf("Prioridad : %d\n", ganador->prioridad);
+    printf("========================================\n");
+}
