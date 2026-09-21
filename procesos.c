@@ -22,8 +22,22 @@ void registrarProcesos(Proceso procesos[], int cantidad) {
     }
 }
 
-// Parte C: Retorna un puntero al proceso ganador para no duplicar datos en memoria
-const Proceso* buscarMayorPrioridad(const Proceso* procesos, int cantidad);
+const Proceso* buscarMayorPrioridad(const Proceso* procesos, int cantidad) {
+    if (cantidad <= 0) return NULL;
+
+    // Puntero apuntando al primer elemento del arreglo
+    const Proceso* ganador = &procesos[0];
+
+    for (int i = 1; i < cantidad; i++) {
+        // La prioridad más alta equivale al número entero más bajo
+        if (procesos[i].prioridad < ganador->prioridad) {
+            ganador = &procesos[i];
+        }
+    }
+
+    return ganador;
+}
+
 
 int main(void) {
     Proceso listaProcesos[MAX_PROCESOS];
@@ -31,4 +45,3 @@ int main(void) {
     return 0;
 }
 
-	
